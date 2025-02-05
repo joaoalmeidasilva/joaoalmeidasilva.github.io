@@ -15,12 +15,11 @@
         <div class="container">
             <div class="coluna verde">
                 <h2>Dados sobre lixo reciclado</h2>
-                <iframe id="mapIframe" src="" allowfullscreen loading="lazy"></iframe>
-
 
             </div>
             <div class="coluna amarela">
                 <h2>Onde reciclar</h2>
+                <div id="map"></div>
             </div>
             <div class="coluna verde">
                 <h2>Guia de como reciclar</h2>
@@ -30,6 +29,12 @@
     <footer>
         <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
     </footer>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL6aFLUFMuxcgPORxLRS7fnB_Q9n8F0EY&callback=initMap&libraries=places">
+    </script>
+
     <script src="map.js"></script>
+
 </body>
 </html>
