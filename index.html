@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Página Inicial</title>
 </head>
 <body>
@@ -14,29 +15,9 @@
         <div class="container">
             <div class="coluna verde">
                 <h2>Dados sobre lixo reciclado</h2>
-                <iframe id="mapIframe" width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="">
-                </iframe>
+                <iframe id="mapIframe" src="" allowfullscreen loading="lazy"></iframe>
 
-                <script>
-                    // Get user's location and update the iframe src
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(function(position) {
-                            const latitude = position.coords.latitude;
-                            const longitude = position.coords.longitude;
 
-                            // Create a Google Maps URL with the user's location and search query
-                            const mapsUrl = `https://www.google.com/maps/embed/v1/search?q=Locais%20de%20Reciclagem&key=AIzaSyAL6aFLUFMuxcgPORxLRS7fnB_Q9n8F0EY&center=${latitude},${longitude}&zoom=14`;
-
-                            // Set the iframe src to the generated URL
-                            const iframe = document.getElementById('mapIframe');
-                            iframe.src = mapsUrl;
-                        });
-                    } else {
-                        alert("Geolocation is not supported by this browser.");
-                    }
-                </script>
             </div>
             <div class="coluna amarela">
                 <h2>Onde reciclar</h2>
@@ -49,7 +30,6 @@
     <footer>
         <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
     </footer>
-
-
+    <script src="map.js"></script>
 </body>
 </html>
